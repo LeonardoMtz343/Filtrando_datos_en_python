@@ -102,8 +102,11 @@ def run():
 
     all_workers_platzi = list(map(lambda workers: workers['name'], all_workers_platzi))
 
-    
+    ''' Vamos a obtener unicamente el nombre de los adultos usando list comprehensions'''
 
+    adults = [ worker['name'] for worker in DATA if worker['age'] >= 18]
+
+    
 
     print('Los desarrolladores de python son: ')
     for worker in all_python_devs:
@@ -113,9 +116,9 @@ def run():
     for worker in all_workers_platzi:
         print(worker)
     
-    # print('Los usuarios adultos son ')
-    # for worker in old_people:
-    #     print(worker)
+    print('Los usuarios adultos son ')
+    for worker in adults:
+        print(worker)
 
 
 

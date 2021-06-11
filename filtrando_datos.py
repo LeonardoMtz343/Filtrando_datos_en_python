@@ -106,7 +106,9 @@ def run():
 
     adults = [ worker['name'] for worker in DATA if worker['age'] >= 18]
 
-    
+    ''' Vamos a obtener unicamente el nombre de los adultos mayores de 70 años usando list comprehensions'''
+
+    old_people= [ worker['name'] for worker in DATA if worker['age'] > 70]
 
     print('Los desarrolladores de python son: ')
     for worker in all_python_devs:
@@ -120,6 +122,10 @@ def run():
     for worker in adults:
         print(worker)
 
+
+    print('Los usuarios mayores de 70 años son ')
+    for worker in old_people:
+        print(worker)
 
 
 if __name__ == '__main__':

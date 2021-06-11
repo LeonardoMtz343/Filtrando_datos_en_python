@@ -75,7 +75,18 @@ def run():
     '''Vamos a obtener unicamente el nombre de los programadores de python'''
     all_pyhton_devs = [worker ['name'] for worker in DATA if worker['language'] == 'python']
 
+    '''Vamos a obtener unicamente los trabajadores de Platzi'''
+    all_workers_platzi = [worker['name'] for worker in DATA if worker['organization'] == 'Platzi']
+
+
+    print('Los desarrolladores de python son: ')
     for worker in all_pyhton_devs:
+        
+        print(worker)
+
+    print('Los trabajadores de platzi son: ')
+    
+    for worker in all_workers_platzi:
         print(worker)
 
 

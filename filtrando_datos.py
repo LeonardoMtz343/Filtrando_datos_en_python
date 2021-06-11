@@ -72,10 +72,14 @@ DATA = [
 ]
 
 def run():
-    pass
+    '''Vamos a obtener unicamente el nombre de los programadores de python'''
+    all_pyhton_devs = [worker ['name'] for worker in DATA if worker['language'] == 'python']
+
+    for worker in all_pyhton_devs:
+        print(worker)
 
 
 
-if __name__ == '__mian__':
+if __name__ == '__main__':
     run()
     

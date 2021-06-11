@@ -96,16 +96,22 @@ def run():
 
     all_python_devs = list(map(lambda workers: workers['name'], all_python_devs))
 
+    ''' Vamos a obtener unicamente el nombre de los trabajadores de platzi usando Filter y map'''
 
+    all_workers_platzi = list(filter(lambda worker: worker['organization'] == 'Platzi', DATA))
+
+    all_workers_platzi = list(map(lambda workers: workers['name'], all_workers_platzi))
+
+    
 
 
     print('Los desarrolladores de python son: ')
     for worker in all_python_devs:
         print(worker)
 
-    # print('Los trabajadores de platzi son: ')
-    # for worker in all_workers_platzi:
-    #     print(worker)
+    print('Los trabajadores de platzi son: ')
+    for worker in all_workers_platzi:
+        print(worker)
     
     # print('Los usuarios adultos son ')
     # for worker in old_people:
